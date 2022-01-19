@@ -1,0 +1,275 @@
+:root {
+
+    /* Definiendo variables */
+
+    --color-red: #e50914;
+    --color-white: white;
+    --color-black: black;
+
+    /* Variables de fuente */
+
+    --text-small: 1.44rem;
+    --text-medium: 1.75rem;
+    --text-big: 2.8rem;
+
+}
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Roboto', sans-serif;  
+}
+
+/* Header, main, Footer */
+
+header {
+
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+    margin: 20px 0px 0px 0px;
+    z-index: 10;
+
+}
+
+/* Componentes */
+
+.svg-icon {
+
+    fill: var(--color-red);
+    width: auto;
+    height: 30px;
+}
+
+.navegationBar {
+
+    display: flex;
+    flex-wrap: none;
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+
+}
+.navegationBar__item {
+
+    width: fit-content;
+    
+
+}
+
+.button {
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 30px;
+    padding: 0px 10px;
+    background-color: #e50914;
+    
+    /* estilos de fuente */
+
+    color: var(--color-white);
+    font-size: var(--text-small);
+    font-weight: 400;
+
+    /* Estilos */
+
+    border-radius: 2px;
+        
+}
+.button--margin{
+
+    margin: 0px 10px;
+
+}
+.button--submit {
+
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.button--fantasma {
+
+    background-color: transparent;
+    border: 1px solid var(--color-white);
+
+}
+
+.card {
+
+    width: 90%;
+    
+
+}
+.card__title {
+
+    font-size: var(--text-big);
+    text-align: center;
+    color: var(--color-white);
+
+}
+.card__subtitle {
+
+    margin: 15px 0px;
+    font-size: var(--text-medium);
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-white);
+    
+
+}
+
+.formulario {
+
+    width: 100%;
+    height: fit-content;
+
+}
+.formulario__subtitle {
+
+    margin: 15px 0px;
+    font-size: var(--text-medium);
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-white);
+
+}
+.formulario__label {
+
+    position: absolute;
+    left: 8px;
+    top: 15px;
+    color: #8C8C8C;
+    font-size: var(--text-small);
+    transition: 300ms all ease;
+
+}
+
+.formulario__container {
+
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+    background-color: var(--color-white);
+    max-width: 500px;
+    border-radius: 5px;
+
+}
+.formulario__input {
+
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    height: 38px;
+    background-color: var(--color-white);
+    border: none;
+    outline: none;
+
+    /* Estilos de fuente */
+
+    font-size: var(--text-medium);
+    font-weight: 400;
+
+}
+.formulario__input:focus + .formulario__label{
+
+    font-size: 1rem;
+    top: 5px;
+    left: 4px;
+
+}
+.icon-arrow-right {
+
+    padding: 0px 0px 0px 8px;
+
+}
+
+
+/* Contenedores */
+
+.container {
+
+    
+    width: 90%;
+    height: fit-content;
+    
+    
+}
+
+/* Modificadores del los containers */
+.container--full-width {
+
+    width: 100%;
+
+}
+.container--flex-row {
+
+    display: flex;
+    flex-wrap: none;
+
+}
+.container--flex-column {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.container--align-right {
+
+    justify-content: flex-end;
+
+}
+.container--complete {
+
+    width: 90%;
+
+}
+.container--center {
+
+    margin: 0 auto;
+
+}
+.container--full {
+
+    width: 100vw;
+    height: 100vh;
+
+}
+.container--bg-inicio {
+    
+    position: relative;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/8d36b5db-2726-441e-9187-b005200b926a/CO-es-20220111-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+}
+.container--bg-inicio::before {
+
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+
+}
+
