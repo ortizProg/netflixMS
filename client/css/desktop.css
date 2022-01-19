@@ -1,0 +1,63 @@
+:root {
+
+    --text-medium: 2.6rem;
+    --text-small: 1.7rem;
+
+}
+.svg-icon {
+
+    height: 40px;
+
+}
+.card__title {
+
+    margin: 0 170.5px;
+
+}
+.formulario__subtitle {
+
+    font-size: calc(var(--text-medium) - 0.8rem);
+    margin-top: 40px;
+
+}
+
+.button {
+
+    padding: 17px 15px;
+
+}
+.formulario__container {
+
+    /* Edicion del border radius */
+    
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+.formulario__input {
+
+    width: 100%;
+
+}
+.button--submit {
+
+    font-size: calc(var(--text-small) + 0.7rem);
+    padding: 30px;
+    margin: 0px;
+
+}
+.container--flex-row-desktop {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+
+}
+/* Contenedores */
+
+.container--large {
+
+    width: 60%;
+
+}
+

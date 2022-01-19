@@ -1,0 +1,32 @@
+:root {
+
+    /* Variables de fuente */
+
+    --text-big: 5rem;
+    --text-medium: 2.6rem;
+
+
+}
+
+.formulario__subtitle {
+
+    font-size: calc(var(--text-medium) - 3px);
+
+}
+.formulario__container {
+
+    padding: 20px 20px 0px 20px;
+
+}
+.formulario__input {
+
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+
+}
+.formulario__label{
+
+    font-size: 1.8rem;
+    top: calc(50% - 12px);
+
+}

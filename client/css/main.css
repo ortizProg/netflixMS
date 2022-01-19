@@ -36,7 +36,7 @@ header {
     position: absolute;
     width: 100vw;
     height: 30px;
-    margin: 20px 0px 0px 0px;
+    margin: 25px 0px 0px 0px;
     z-index: 10;
 
 }
@@ -84,6 +84,7 @@ header {
     /* Estilos */
 
     border-radius: 2px;
+    cursor: pointer;
         
 }
 .button--margin{
@@ -99,9 +100,9 @@ header {
 
 }
 
-.button--fantasma {
+.button--fantasma-black {
 
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid var(--color-white);
 
 }
@@ -109,6 +110,7 @@ header {
 .card {
 
     width: 90%;
+    max-width: 1000px;
     
 
 }
@@ -162,7 +164,8 @@ header {
     width: 100%;
     padding: 10px 10px 0px 10px;
     background-color: var(--color-white);
-    max-width: 500px;
+    margin: 0 auto;
+    max-width: 420px;
     border-radius: 5px;
 
 }
@@ -208,6 +211,7 @@ header {
 }
 
 /* Modificadores del los containers */
+
 .container--full-width {
 
     width: 100%;
@@ -217,6 +221,12 @@ header {
 
     display: flex;
     flex-wrap: none;
+
+}
+.container--flex-row-wrap {
+
+    display: flex;
+    flex-wrap: wrap;
 
 }
 .container--flex-column {
