@@ -8,9 +8,11 @@
 
     /* Variables de fuente */
 
+    --text-small-button: 1.6rem;
     --text-small: 1.44rem;
     --text-medium: 1.75rem;
     --text-big: 2.8rem;
+    --text-very-big: 3.2rem;
 
 }
 
@@ -48,6 +50,15 @@ header {
     fill: var(--color-red);
     width: auto;
     height: 30px;
+
+}
+.svg-icon--login {
+
+    position: absolute;
+    height: 48px;
+    left: 10px;
+    
+
 }
 
 .navegationBar {
@@ -62,6 +73,7 @@ header {
 .navegationBar__item {
 
     width: fit-content;
+    text-decoration: none;
     
 
 }
@@ -78,8 +90,9 @@ header {
     /* estilos de fuente */
 
     color: var(--color-white);
-    font-size: var(--text-small);
-    font-weight: 400;
+    font-size: var(--text-small-button);
+    font-weight: 700;
+    border: none;
 
     /* Estilos */
 
@@ -87,9 +100,19 @@ header {
     cursor: pointer;
         
 }
+.button__text--center {
+
+    margin: 0 auto;
+
+}
 .button--margin{
 
     margin: 0px 10px;
+
+}
+.button--full-width {
+
+    width: 100%;
 
 }
 .button--submit {
@@ -97,6 +120,11 @@ header {
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
+
+}
+.button-vertical-margin-20 {
+
+    margin: 45px 0px 20px 0px;
 
 }
 
@@ -109,9 +137,15 @@ header {
 
 .card {
 
+    position: relative;
     width: 90%;
     max-width: 1000px;
     
+
+}
+.card--vertical-align {
+
+    top: 20%;
 
 }
 .card__title {
@@ -131,11 +165,27 @@ header {
     
 
 }
+.card--absolute {
 
+    position: absolute;
+
+}
+.card--center {
+
+    margin: 0 auto;
+
+}
 .formulario {
 
+    position: relative;
     width: 100%;
     height: fit-content;
+
+}
+.formulario__title {
+
+    font-size: var(--text-very-big);
+    color: var(--color-white);
 
 }
 .formulario__subtitle {
@@ -157,15 +207,20 @@ header {
     transition: 300ms all ease;
 
 }
+.formulario__text {
 
+    text-decoration: none;
+    color: #8C8C8C;
+    font-size: var(--text-small);
+
+}
 .formulario__container {
 
     position: relative;
     width: 100%;
     padding: 10px 10px 0px 10px;
     background-color: var(--color-white);
-    margin: 0 auto;
-    max-width: 420px;
+    margin: 20px auto;
     border-radius: 5px;
 
 }
@@ -175,6 +230,7 @@ header {
     width: 100%;
     margin: 0px auto;
     height: 38px;
+    max-height: 38px;
     background-color: var(--color-white);
     border: none;
     outline: none;
@@ -185,6 +241,60 @@ header {
     font-weight: 400;
 
 }
+.formulario__checkbox {
+
+    opacity: 0;
+
+}
+.formulario__container-max-width-372 {
+
+    max-width: 372px;
+
+}
+.formulario__text--checkbox {
+
+    margin-left: 6px;
+
+}
+.formulario__text--checkbox:before {
+
+    content: "";
+    position: absolute;
+    left: 0;
+
+}
+.formulario__text--checkbox::before {
+
+    width: 16px;
+    height: 16px;
+    background-color: #8C8C8C;
+    border-radius: 2px;
+
+}
+.formulario__checkbox:checked + .formulario__text--checkbox:after {
+
+    content: "s";
+    font-size: 1.7rem;
+
+}
+.formulario__checkbox:checked + .formulario__text--checkbox::after {
+
+    color: var(--color-black);
+    position: absolute;
+    left: 3px;
+    bottom: 2px;
+
+}
+.formulario__container--bg-black {
+
+    background-color: #333333;
+
+}
+.formulario__input--bg-black {
+
+    background-color: #333333;
+
+}
 .formulario__input:focus + .formulario__label{
 
     font-size: 1rem;
@@ -192,9 +302,31 @@ header {
     left: 4px;
 
 }
+.formulario__container--max-width-420 {
+
+    max-width: 420px;
+
+}
+.formulario--relative {
+
+    position: relative;
+
+}
+.formulario__text--right {
+
+    position: absolute;
+    right: 0;
+
+}
 .icon-arrow-right {
 
     padding: 0px 0px 0px 8px;
+
+}
+.vertical-margin-30 {
+
+    margin: 30px 0px;
+
 
 }
 
@@ -215,6 +347,11 @@ header {
 .container--full-width {
 
     width: 100%;
+
+}
+.container--relative {
+
+    position: relative;
 
 }
 .container--flex-row {
@@ -254,6 +391,11 @@ header {
     margin: 0 auto;
 
 }
+.container--margin-top-20 {
+
+    margin-top: 20px;
+
+}
 .container--full {
 
     width: 100vw;
@@ -282,4 +424,9 @@ header {
     z-index: -1;
 
 }
+.container--bg-black {
 
+    background-image: none;
+    background-color: var(--color-black);
+
+}

@@ -26,7 +26,7 @@
     padding: 17px 15px;
 
 }
-.formulario__container {
+.formulario__container--border-radius-right-none {
 
     /* Edicion del border radius */
     
@@ -39,7 +39,8 @@
     width: 100%;
 
 }
-.button--submit {
+
+.button--submit--inicio {
 
     font-size: calc(var(--text-small) + 0.7rem);
     padding: 30px;
