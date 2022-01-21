@@ -1,0 +1,751 @@
+/* Declarando variables */
+
+:root {
+
+    /* Definiendo variables */
+
+    --color-red: #e50914;
+    --color-white: white;
+    --color-black: black;
+
+    /* Variables de fuente */
+
+    --text-small-button: 1.6rem;
+    --text-small: 1.44rem;
+    --text-medium: 1.75rem;
+    --text-big: 2.8rem;
+    --text-very-big: 3.2rem;
+
+}
+
+* {
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html {
+
+    font-size: 62.5%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Roboto', sans-serif;  
+
+}
+body {
+
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    background-color: #141414;
+
+}
+/* Componentes */
+
+.svg-icon {
+
+    fill: var(--color-red);
+    width: auto;
+    height: 30px;
+
+}
+.svg-icon--browse {
+
+    height: 18px;
+
+}
+.header {
+
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+
+}
+.header--fixed {
+
+    position: fixed;
+    padding: 30px 0px;
+    z-index: 100;
+
+}
+.header__text {
+
+    font-size: var(--text-small);
+    color: var(--color-white);
+
+}
+
+.quienVe{
+
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: #141414;
+
+}
+.quienVe__logo {
+
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+}
+.quienVe__container {
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.quienVe__titulo {
+
+    font-size: var(--text-very-big);
+    font-weight: 400;
+    color: var(--color-white);
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+
+}
+.quienVe__container--flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+
+}
+.box {
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+.box:hover > .box__imagen:before {
+
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    
+
+}
+.box:hover > .box__imagen::before {
+
+    width: 98%;
+    height: 88%;
+    border: 2px solid var(--color-white);
+    border-radius: 5px
+
+}
+.box__imagen {
+
+    width: 100%;
+    height: 90%;
+    min-height: 84px;
+    max-height: 250px;
+    background-image: url('https://lh3.googleusercontent.com/fife/AAWUweX7K8arp5c7reHgiHSPpvYG6eQQFSe5tim_GotoMog95kYA0RV_j-uZPhscrDAoVog8d_AO-li4ImZiOiinH2F4j6WHV8mwoeFv8HCr90BhbZzToxWWXyq0aHIjV7e_1NrmPEt52igEWbYEgtCZSuvivInEtOc8de5754lMqBmksrMm2IVAKmpdMpvohq8QJODCIjeaFnMKgZqOIFopWzqK6MffpPmwWa62ywz7cFOdgZLb4_1-CAnP_LbSUaLAlEop6e1hRYuRDRPh2tKbFgMylqy61nQD9Y-1Yc2zyJtgB0I0ZcfRobmN7TMLfka_ATs0KWTQxgeWfskhRhYLop8x_3qoVqowDKLbOvVvrTd0P8FgvET4k-TcTKS8Y69luOq6oSozR1Mm3lM0iHerEvuPUZiiuiQPXGrTBG0bo5aKy5C1_l5ZByjvMucvX50IZxLUQgXjsALoEsBv2wq-aNVn1eUJVMwBZwG-_-W28uitbrRRNfxrZQpnZfPWEnWYT1K-5p754qWuAy3x0TZX9GcLD1Iv812GSjJwhk_6UaAk1MX4h-LbulLeJm8UHSHwWkxe_Fxr3yn8XUCG0nLGE7Pci2cs5aoRx_Uh_hjHYS9X2mw1hhBYLXZnyKCJFje--vWPuj4In7Vbii4_7RpaUorqMwm-nnQWhDLEc34xC-dgdgQ43YngeYVtNxK_4Vs7qeAwYs5LNhhLB4RxRnBtbZz701BzhVAApQ=w200-h190-p-k-nu-ft');
+    background-position: center;
+    background-size: cover;
+
+    /* estil de bordes */
+
+    border-radius: 5px;
+
+}
+.box__texto {
+
+    width: fit-content;
+    font-size: var(--text-small);
+    font-weight: lighter;
+    color: #808080;
+    margin: 0 auto;
+    margin-top: 5px;
+    
+
+}
+
+.button {
+
+    position: absolute;
+    width: 220px;
+    background-color: transparent;
+    border: 1px solid #808080;
+    padding: 7px 25px;
+    left: calc( 50% - 110px);
+    margin: 60px 0px 20px 0px;
+    
+
+}
+.button__text {
+
+    font-size: var(--text-small-button);
+    font-weight: lighter;
+    color: #808080;
+
+}
+.avatar {
+
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url('https://lh3.googleusercontent.com/fife/AAWUweX7K8arp5c7reHgiHSPpvYG6eQQFSe5tim_GotoMog95kYA0RV_j-uZPhscrDAoVog8d_AO-li4ImZiOiinH2F4j6WHV8mwoeFv8HCr90BhbZzToxWWXyq0aHIjV7e_1NrmPEt52igEWbYEgtCZSuvivInEtOc8de5754lMqBmksrMm2IVAKmpdMpvohq8QJODCIjeaFnMKgZqOIFopWzqK6MffpPmwWa62ywz7cFOdgZLb4_1-CAnP_LbSUaLAlEop6e1hRYuRDRPh2tKbFgMylqy61nQD9Y-1Yc2zyJtgB0I0ZcfRobmN7TMLfka_ATs0KWTQxgeWfskhRhYLop8x_3qoVqowDKLbOvVvrTd0P8FgvET4k-TcTKS8Y69luOq6oSozR1Mm3lM0iHerEvuPUZiiuiQPXGrTBG0bo5aKy5C1_l5ZByjvMucvX50IZxLUQgXjsALoEsBv2wq-aNVn1eUJVMwBZwG-_-W28uitbrRRNfxrZQpnZfPWEnWYT1K-5p754qWuAy3x0TZX9GcLD1Iv812GSjJwhk_6UaAk1MX4h-LbulLeJm8UHSHwWkxe_Fxr3yn8XUCG0nLGE7Pci2cs5aoRx_Uh_hjHYS9X2mw1hhBYLXZnyKCJFje--vWPuj4In7Vbii4_7RpaUorqMwm-nnQWhDLEc34xC-dgdgQ43YngeYVtNxK_4Vs7qeAwYs5LNhhLB4RxRnBtbZz701BzhVAApQ=w200-h190-p-k-nu-ft');
+    background-position: center;
+    background-size: cover;
+    right: 0;
+    border-radius: 3px;
+
+}
+
+.browse {
+
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #141414;
+
+}
+
+.cabecera {
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    min-width: 100vw;
+    height: calc(100vw / 2 + 2.96vw);
+    max-height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/fife/AAWUweWOvS9zpw_cOElr1CqfCVIMF9O6PoSoMxN_XpJmbcTAcv8XMg6QSpvu3-KxiiSyoSKqPTcNdizcbJrWCz9XLBXsQsxFGyuXvixJpAlwz4bON06ymncWGmM2zWPj9UllTvWmXJ8-bJfVeakDFDhjlKm006AKhHtYzIZ_iJGvaUT913aMymlBQw1Fa9TWW9Ssm8NwMIUNSisksLfYGHQtatAVeYNQIeU4gBnVNzfZpoSazio58BS25n_7mZEgoEUt3mc2_xQT-Bmcu183S6spc8Ctc979NR47fp_P7rg_1ON_3olxAjx-9xxcbrPngjVDYOPRR7FTnGKMdoya72KXGYpTTf2_mjIelzXdk9tAaKTz08WGtUojQAZ_aS0W4-Geegxh65YoI3gbkkI3wEzeYs_DNDiJLKzceuzgE7OeaWtnsJtMir4PqIls0Ip1I3zS5q6lmAMIHnqCF-BkIrSntB_ywMUNck07hB6yd494Kx8jBnhc1AQF-KUGYpkS0GY-guXvhhdRYvU5vP2XVL7BqPpW__KHLbfuSlS3DzrKNr2ZVU2jW4XXJYIOuFpV88xtsHgIhPxjHQQE6KJ6UMJvC8bboppqCjL2YB2tj9Ym3tSrwrTEMRUPdLNjbLWazbs9V3chaQwUXxzIihv0sMZ4bNbIh1PXAKz8WgxqtYhxMJdhE1074jMxTOJdNieyIubr0OFJ1GFE4KvtBPB_DctwIJomffbWKiSdoA=w1366-h695-ft');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+.declaracion {
+
+    position: relative;
+    width: 50%;
+    height: fit-content;
+    margin-left: 15px;
+
+}
+.declaracion__title {
+
+    font-size: var(--text-big);
+    text-align: center;
+    color: var(--color-white);
+
+}
+.boton--propuesta {
+
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: transparent;
+    font-size: var(--text-small-button);
+    font-weight: bolder;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.boton--propuesta:hover {
+
+    transform: translateY(-5px);
+
+}
+.lista-peliculas {
+
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    padding-left: 15px;
+
+}
+
+.lista-peliculas__text {
+    
+    font-size: var(--text-small);
+    color: var(--color-white);
+
+}
+.lista-peliculas__container {
+
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: fit-content;
+    max-width: calc(100vw - 15px);
+    height: 125px;
+    margin-top: 4px;
+    overflow: hidden;
+    overflow-x: scroll;
+
+}
+.lista-peliculas__item {
+
+    position: relative;
+    min-width: 180px;
+    height: 100%;
+    margin-right: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+.lista-peliculas__item::after {
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.9s all ease;
+    transform: translateY(100%);
+    font-size: var(--text-small);
+    color: var(--color-white);
+    text-align: center;
+    
+    
+
+}
+.lista-peliculas__item:hover::after {
+
+    cursor: pointer;
+    transform: translateY(0);
+
+}
+
+.lista-peliculas__item--img-1::after {
+
+    content: "Me enamoro el poder ser yo soy contigo sin temor a nada.";
+
+}
+.lista-peliculas__item--img-2 {
+
+    background: url('../assets/1642732593059.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-2::after {
+
+    content: "En ti encontre la mujer que quiero para mi vida.";
+
+}
+.lista-peliculas__item--img-3 {
+
+    background: url('../assets/1642732593000.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-3::after {
+
+    content: "En ti encuentro un apoyo para realizar todos mis proyectos.";
+
+}
+.lista-peliculas__item--img-4 {
+
+    background: url('../assets/1642732592927.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-4::after {
+
+    content: "Mi amorcito con vos lo quiero todo. Me haces sentir muy seguro a tu lado.";
+
+}
+.lista-peliculas__item--img-5 {
+
+    background-image: url('https://lh3.googleusercontent.com/fife/AAWUweWa0cuPy4Xpi0OWUmhDqixK-bN_GiI58hXj3ri0YcS6e-hkDQ3Xdj4Sv4kMT3RS70AHCx9W9rlLUCDoaHgp4KSE8zYHU1y7lmmfnJ1JMiUc34lhmphXN9K_HN6A0WRa2KIysj-NSItrej4yXAFiw4xoTonz-zFuv2tp4E4IF_eTBTUt8dy020h1TRtMa8015yFySur5P-uTVjn5Yg5yH4Yngj5CoB85INLeMRlR1U-tPspTAWi9np_cXjo9iEpAWBUHLCOc3cqtXuLgh5qIWi5npI08IrmF2LcH8aWZpkZulsiudVGxFPNE2itxfe0qfdQfo6GiOWjTvFIxEQALCM4tLwDnwBR2TnukWEboJiHcCczxtHq_tMLS1SayEjWu5Y8BTPl9BO08LsXO3GO4ig0b2cyiYLgwQu5zp68mpYxD35vENXNuLVuIvRr2PgSVaptUdjePiGAZ6ZVbgXxg5JFa4g7CVcGsjPlx8jOpG_0q19ybggM4oI25Wx09AwNu__W9CRhHsdclI7t-1-HNW3mpNvsyRmaCAqKntAVZQ7XSN7BT3qmC26ivXV3YUFifPRfByoWCxxUSQVnjUSFFPrrxVwSQ2GTKHy2HuqdrF0n3Z4a26-gKGh3s13tcIU5FdKw2-nRFnGMCzy7PGn-g3GNnoykxWoSgK83qwwmKVpQ9m-zVRgSEAIbYVmUn-kHLa2KeC3fresNhGquLrLOQ_HFMffbbs4VneQ=w200-h190-p-k-nu-ft');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-5::after {
+
+    content: "Solo puedo verte a ti cuando cierro los ojos y solo quiero verte a ti al abrirlos.";
+
+}
+.lista-peliculas__item--img-6 {
+
+    background-image: url('../assets/AAWUweUCCjpaYH-Zn9YnbRkdHnConIjZr9Yv0S7bQfMMUm1JPBbKcKrUw8PhPCd2djo_IdKVPmTwj2pCPZZW7P3qeBTRqRyroeY2ENV3R1vhuTGqYC9hB1IV4EHcbLiSBRv5k2P985_mpgmtGhZH9Hubr2gQvu1dWYt9TfVIEqa7Hi3dxyTe9faZVv3oTf51gS6Rkw8xudMbhMyMya8T.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-6::after {
+
+    content: "Por las tardes que hemos pasado juntos.";
+
+}
+.lista-peliculas__item--img-7 {
+
+    background-image: url('https://lh3.googleusercontent.com/fife/AAWUweWh1pkVrWRX-ATHw63qwBfZB6DfSFkdhy9lQzPYzYDU6iBxK5wbF9LlcZMVY-PUr2_YyrmZJmAkCuda6IB3maDeXdO4G--JwStPVFXcd3sJqZ7iL4u_a2ZFDo58O_XJJL3I3z-k_4_ZE-z7zshTHspRW1Cl8Nv0bbO3lDQALTx4Xs7pPz34f3mr7IwvUvjJPVtyWu-9oeoZ3IoSc1IvWKncfDELrflj2FAHzqEGg3rYb5LGchewn39MELZCqgpwKSWNYxUkvCaalgWnDFUqINy3BJRWsOBjLrFQl3-hxW4dAceaPvmm-cCg0s6WoXm2BY4xvaa3W1Wz8MuQiwuRatTP-5h5Y54c8aAPpLUROY7jmn8Vpslt0VYbh1h-Qn34iE8-oDp0s4rAg4N2_KdtSilNdomHCXHrh7D6m0EOpjE6eRtaA8yIiA9KRvWPIM4LxCLYV4VO5rAJK1I2B2FJtvKj9LPeXmJsx9XeHg0W5y_DP7cgA_LaffJ9wROdgBtrPHd0DRmJ64rXHi3cjlwJjEKvMpBaZ27RmiN0PXHp6OzdfaVACXs6BBumsVziusZIlaXoKe3rkUN5A4G2JtOA5Rq-1vGe40ZdHJVCK7W0BcaRaWk0i3R4UbvUM084r-Ncr_ZWn-4QPHgkekIMd92E3wpfTm2SKORorjsxEPiuj6_cfcQXYKIWOvf9mpcuvs4Q9Lkm3En3_eHhQ5wEKqa5JITmo_cWjgppbVLYDtlU_w=w200-h190-p-k-nu-ft');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-7::after {
+
+    content: "No imagino una vida sin ti mi amor.";
+
+}
+.lista-peliculas__item--img-8 {
+
+    background-image: url('../assets/AAWUweW6ZtEpXFskqj574WXRrnU6-PZzqz9XOLN6_kS7Y8NbjXUJxRuYmKxagegndpgjsKNleCiyPQtYWRJMl8g5DQqVyvAxTSx_g2W4fdbtirqnrG9ZjS8cxBDdZL3Qc2XFnn4cP53IdqWMgYNtu-FCNDTbUrfE7MYyP51MpkjP17jktmvMkv8wIqiznv3SCHWvRKn4-PT8HaaeX0Ew.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-8::after {
+
+    content: "Por confiarme tus secretos y guardar los míos.";
+
+}
+.lista-peliculas__item--img-9 {
+
+    background-image: url('../assets/AAWUweWC873lyC3DYzmUQ2mhgrUfPDYMcwsaamiNyW5RtwsBtnIgOga_mYawf1x15JIzuFUG04m9MU10TdZtYcK7cDeNGvLhvx-XJzUbcgXt-TEwJLujTwNL6CfxPKqVGsgrlgK3Hpnud2208MemSpNM0WjA_zJVZKYxKY_orPBxIPb6OA_r6DZVwsSfWG0IHXNZ4DNn3RRhHGmMgbli.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-9::after {
+
+    content: "Por ayudarme a levantarme cada vez que me he caido.";
+
+}
+.lista-peliculas__item--img-10 {
+
+    background-image: url('../assets/AAWUweWHGiKj356RvQssDkxtpvf9mPAIFmnLyYOYanumUXEhAK57dSzYAXRTPUThAysDb7ismE1dlpFg58x83AEj-iiRwT7At2Jn1FB9uLs9PI7FJACe-tpa-F4yNO8cR4pdpR_rtzRY0DOoVxZFLbqD4LCriy3CUNuA3cRwQjsVhxhB8wy4-76UNRXCpU2dEH094GvJBU2vYQCRPKab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-10::after {
+
+    content: "Por llenar mi vida de alegrias e ilusiones.";
+
+}
+.lista-peliculas__item--img-11 {
+
+    background-image: url('../assets/1642732593147.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-11::after {
+
+    content: "Por todas las palabras que me has dejado en el corazón.";
+
+}
+.lista-peliculas__item--img-12 {
+
+    background-image: url('../assets/1642732593166.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-12::after {
+
+    content: "Porque eres parte de mi familia.";
+
+}
+.lista-peliculas__item--img-13 {
+
+    background-image: url('../assets/AAWUweVGSZiGRTmWfLViEC7H3vMCQ1mgDei9zdDwyoxIBl_k-flfnhxQEEjA52v5etde3iC6G7CaqQlroSNNDuFAfxPPGJk0eq3p7ZrLR-WPBgCpXBMyugI6wYo1uo44iE7cIwfj1l8w5EAFNV6JtDn6keN9gl6V7H-YYHJDCJ0WyJboEKsXeJqcNkiUp7AassvASq00SK-si-wem0vf.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-13::after {
+
+    content: "Por tener la habilidad de hacerme feliz sin TRAMPAS ni consecuencias.";
+
+}
+.lista-peliculas__item--img-14 {
+
+    background-image: url('../assets/AAWUweW_avTZlJKuekvXsDHpCwtPprQe_UaMg2NcT7o9HuryVX4rU0D671r6DTTTcz14PdzbdV7RFWBomwocxka1eOFVGaKSzJSX3pZdvhkou-BcJzTSw__7DlibILrMbCdrpdcIXlhLQQzGPvFzpPkS7sB3Oj-RHpYRgDB1QsslBswYDAqj3KlgqXQxhJ97C5L7aamo1G-NjkodakkE.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-14::after {
+
+    content: "Por abrir tu corazon y tu vida y compartirlos conmigo mi amor.";
+
+}
+.lista-peliculas__item--img-15 {
+
+    background-image: url('../assets/AAWUweUgxw2va-VeEBz4J5Opw6CLn5sFK4407XqzXfB42f9Q3Zsz-8l-SqHc-5SCiFbSOfoxVgtK_2FY0JTtZEG0cIVlHLHpiLFzAUPcXDsbJuQsDHzFcm3OF2yPq2GaQyk3bGqlbA92pLbVAwKT6bZb6WmazPh-TAg1TCK4enk8P-ElhP5ANFBhWoPRgmc-bZsLKohWwXtrc5IalYJs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-15::after {
+
+    content: "Por tener las palabras justas para hacerme fuerte o para levantarme en las caídas.";
+
+}
+.lista-peliculas__item--img- {
+
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-::after {
+
+    content: ".";
+
+}
+.lista-peliculas__item--img- {
+
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-::after {
+
+    content: ".";
+
+}
+.lista-peliculas__item--img- {
+
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-::after {
+
+    content: ".";
+
+}
+.lista-peliculas__item--img- {
+
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-::after {
+
+    content: ".";
+
+}
+.lista-peliculas__item--img-100 {
+
+    background: url('../assets/1642732592939.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-100::after {
+
+    content: "Por ser tan especial conmigo, por darme amor comprensión y ternura. Vamor por mucho mas tiempo te amo ❤️.";
+
+}
+.lista-peliculas__item--img-momentos-1 {
+
+    background: url('../assets/AAWUweWEDj1bq4LV6uWI5oHjCkTUqQ2y3CwOx_zdsbUb88LIfgYCOsZpJks5GO5CpZCLMI00FhmuICd8w3-HHqRJA-R2rSXgmoHGvjsTdzw8RUlaLbIuP1kgZi2qzgoZMdB84szAmQtXC9fGRcIlXP5w8-ygOL4fMo0DjuXF65ITR8ZyGF3nybZ0CNTtj5Mi2SmUdC6v9fPAzd-FyJC_.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-momentos-1::after {
+
+    content: "La graduación de mi amorcito.";
+
+}
+.lista-peliculas__item--img-momentos-2 {
+
+    background: url('../assets/AAWUweWGq5g6xKOZvJzsurQ8f4mIOx_CT14GN4YiSOlUDLE2LRDg12iDJpt13Xo3UXTF_2rjPxrYV1HzZR_xn_TLQnhABYQWr4JZd15_QjnokL4UShurtBb9HWyiFIuJ7S-3H7BrdgJ6oKW-HC49plnzxPAZiRo7pMIUsG8rwiJHhg4f-m9hxrcsyduNOI7-TO6njND-N4N4fprlMlG6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-momentos-2::after {
+
+    content: "La borrachera despues de la graduación jajaja.";
+
+}
+.lista-peliculas__item--img-momentos-3 {
+
+    background: url('../assets/1IzD32fNMOhjyUY0Fq3sGUONgVahr8mRk=w200-h190-p-k-nu-iv1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.lista-peliculas__item--img-momentos-3::after {
+
+    content: "Tirando los prohibidos xD.";
+
+}
+.lista-peliculas__item--img-momentos-4 {
+
+    background: url('../assets/AAWUweX-bktkbSE6r5BKoBQB1EkcYQSixExlaBrTVI_iPdyLUWTskTsWaQ2r9V9jB38Vkb37yyvu68I0KZITnHa7BUser-Wn031PBPHW2wte5YPqrVQdCZHE-_s1P9TZUHe6YFi3FfCYxUAUJnLmVFccND1JmenG0hTU28joeF7MqUT_xl9XL62PlTi1Gr4tltHvs60_2ao1mLoViAyM.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+.lista-peliculas__item--img-momentos-4::after {
+
+    content: "La graduacion de mi amorcito :3";
+
+}
+.lista-peliculas__item--img-momentos-5 {
+
+    background: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+.lista-peliculas__item--img-momentos-5::after {
+
+    content: "Besando a mi amorcito :3";
+
+}
+.lista-peliculas__item--img-momentos-6 {
+
+    background: url('../assets/AAWUweWJmpG7QvyeilW3Ao1GWH7oQUSo3Pji0aH1n7RlLBjHu8siBcbORFJTb5ey3UHYi_m_KIV-JMqFypTlZhJb3F6dA97VZ9DQANB3BIISDROtkJbVd10OhfOshxCGgKxkptYVrNTGVX5mdceWZcfHchwpYKLbBnnC8Oni0pNhJtz1WLYIDw8EjD7U3s_lBLOnVuUfKDRFlOLMZIQJ.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+}
+.lista-peliculas__item--img-momentos-6::after {
+
+    content: "Nuestra salida a antojo mexicano :)";
+
+}
+
+
+
+
+.lista-peliculas__item--img-1 {
+
+    background: url(../assets/1642732592961.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+} 
+/* Contenedores */
+
+.contenedor {
+
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+
+}
+.contenedor--relative {
+
+    position: relative;
+
+}
+.contenedor--flex-row-nowrap {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+
+}
+.header--black {
+
+    background: url('https://assets.nflxext.com/en_us/akira/jawBone/nav-shadow.png');
+
+}
+.header__left {
+
+    width: fit-content;
+    height: 100%;
+
+}
+.header__left-item {
+
+    margin: 0px 5px;
+
+}
+.header__right {
+
+    width: fit-content;
+    height: 100%;
+
+}
+.contenedor--flex-horizontal-align {
+
+    justify-content: center;
+
+}
+.contenedor--flex-vertical-align {
+
+    align-items: center;
+
+}
+.contenedor--full-height {
+
+    height: 100%;
+
+}
+.contenedor--peliculas {
+
+    width: 100vw;
+    min-height: 50vh;
+    height: fit-content;
+    position: absolute;
+    transform: translateY(-30px);
+
+}
+
+/* modificaciones del icono */
+
+.icon--small {
+
+    transform: rotate(180deg) scale(0.6);
+
+}

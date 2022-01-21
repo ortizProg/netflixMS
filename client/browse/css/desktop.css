@@ -1,0 +1,88 @@
+/* Declarando variables */
+
+:root {
+
+    /* Definiendo variables */
+
+    --color-red: #e50914;
+    --color-white: white;
+    --color-black: black;
+
+    /* Variables de fuente */
+
+    --text-small-button: 1.6rem;
+    --text-small: 1.44rem;
+    --text-medium: 1.75rem;
+    --text-big: 2.8rem;
+    --text-very-big: 5rem;
+    --text-super-big: 9rem;
+
+}
+
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/* Componentes */
+
+.quienVe__titulo {
+
+    margin: 0px 0px 30px 0px;
+
+}
+.quienVe__container {
+
+    margin-bottom: 150px
+
+}
+.box {
+
+    width: 180px;
+    height: 180px;
+
+}
+.cabecera {
+
+    background-size: cover;
+
+}
+.lista-peliculas__text {
+
+    font-size: var(--text-medium);
+
+}
+.lista-peliculas {
+
+    margin: 0px 0px 100px 0px;
+
+}
+.lista-peliculas__container {
+
+    height: 200px;
+
+}
+.lista-peliculas__item {
+
+    min-width: 310px;
+
+}
+.contenedor--peliculas {
+
+    transform: translateY(-60px);
+
+}
+.declaracion__title {
+
+    font-size: var(--text-super-big);
+
+}
+.boton--propuesta {
+
+    padding: 10px 30px;
+    font-size: var(--text-medium);
+
+}
