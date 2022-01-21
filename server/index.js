@@ -57,7 +57,7 @@ btnSubmit.addEventListener("click", () => {
 
         if( valuePassword == baseDeDatos().obtenerUsuarios()[0].password ) {
 
-            console.log("login exitoso");
+            location.href = ("../browse/browse.html");
 
         } else {
 
