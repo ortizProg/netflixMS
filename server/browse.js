@@ -2,6 +2,7 @@
 
 const boxPerfilMs = document.getElementById('perfilMS');
 const sectionQuienVe = document.getElementById('sectionQuienVe');
+const sectionPeliculas = document.getElementById('sectionPeliculas');
 const btnNo = document.getElementById('btnNo');
 const btnSi = document.getElementById('btnSi');
 
@@ -11,8 +12,11 @@ boxPerfilMs.addEventListener("click", () => {
 
     
     sectionQuienVe.style.display = "none";
+    sectionPeliculas.style.display = "block";
 
 });
+
+console.log(sectionPeliculas);
 
 btnNo.onmouseover = function() {
 

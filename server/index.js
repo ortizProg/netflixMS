@@ -16,9 +16,9 @@ console.log(baseDeDatos().obtenerUsuarios());
 // obtener elementos del DOM 
 
     const cuenta = document.getElementById('formularioCuenta');
-    const cuentaLabel = document.getElementById("labelCuenta")
+    const cuentaLabel = document.getElementById("labelCuenta");
     const contraseña = document.getElementById('formularioPassword');
-    const contraseñaLabel = document.getElementById('labelPassword')
+    const contraseñaLabel = document.getElementById('labelPassword');
     const btnSubmit = document.getElementById('btnSubmit');
 
 // validacion del login con el button submit
@@ -31,14 +31,14 @@ function efectoDelLabel(element, label) {
 
             label.style.top = "5px";
             label.style.left = "4px";
-            label.style.fontSize = "1rem"
+            label.style.fontSize = "1rem";
 
         }
     });
 }
 
 efectoDelLabel(cuenta, cuentaLabel);
-efectoDelLabel(contraseña, contraseñaLabel)
+efectoDelLabel(contraseña, contraseñaLabel);
 
 btnSubmit.addEventListener("click", () => {
 
@@ -47,11 +47,11 @@ btnSubmit.addEventListener("click", () => {
     
     if (valueCuenta.length === 0) {
 
-        console.error("Por favor ingrese una cuenta valida")
+        alert("Por favor ingrese una cuenta valida");
 
     } else if (valuePassword.length === 0) {
 
-        console.error("Por favor digite una contraseña valida")
+        alert("Por favor digite una contraseña valida");
         
     } else if (valueCuenta == baseDeDatos().obtenerUsuarios()[0].email ||valueCuenta == baseDeDatos().obtenerUsuarios()[0].numeroTelefonico ) {
 
@@ -61,13 +61,13 @@ btnSubmit.addEventListener("click", () => {
 
         } else {
 
-            console.warn("Contraseña incorrecta!")
+            alert("Contraseña incorrecta!");
 
         }
 
     } else {
 
-        console.warn("No existe ninguna cuenta con estos datos.")
+        alert("No existe ninguna cuenta con estos datos.");
 
     }
 
